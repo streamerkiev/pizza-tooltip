@@ -1,0 +1,188 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    margin: 100px 0 0;
+    padding: 0 2%;
+    width: 65%;
+    max-width: 1280px;
+    float: left;
+}
+.pizza {
+    position: relative;
+    margin: 0 auto;
+    max-height: 600px;
+    max-width: 600px;
+}
+.pizza-img {
+    width: 100%;
+}
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: url("images/loader.gif") center no-repeat #fff;
+}
+.tooltip {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    min-width: 100px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tooltip-right-top {
+    bottom: 20px;
+    left: 20px;
+}
+.tooltip-left-top {
+    bottom: 20px;
+    right: 20px;
+}
+.tooltip-right-bottom {
+    top: 20px;
+    left: 20px;
+}
+.tooltip-left-bottom {
+    top: 20px;
+    right: 20px;
+}
+.circle {
+    position: absolute;
+    margin: 0 0 -15px -15px;
+    height: 30px;
+    width: 30px;
+    background: url("images/plus-minus.png") 0 0 no-repeat;
+    cursor: pointer;
+}
+.active-circle {
+    background-position:0 -30px;
+}
+.mobile-tooltip {
+    display: none;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mobile-tooltip span {
+    display: block;
+}
+.toolbar-wrapper {
+    position: relative;
+    padding: 5px;
+    margin: 100px 20px 0 0;
+    width: 23%;
+    min-width: 270px;
+    float: right;
+    border: 1px solid #a8a8a8;
+    background-color: #f0f0f0;
+}
+#toolbar-deactivator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    background: url("images/loader.gif") center no-repeat #f0f0f0;
+    opacity: 0.5;
+}
+.toolbar {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+}
+.toolbar h1 {
+    color: #717171;
+    font-size: 20px;
+    margin: 5px 0;
+}
+.accordion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.accordion-item {
+    padding: 7px;
+    margin-bottom: 3px;
+    background-color: #ccc;
+    font-size: 14px;
+}
+.accordion-item > span {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+}
+.accordion-content {
+    display: none;
+    margin-top: 5px;
+    padding-top: 10px;
+    text-align: left;
+    border-top: 1px solid #a8a8a8;
+}
+.controls {
+    padding-top: 15px;
+    text-align: center;
+}
+.add-text-wrapper, .remove-text-wrapper {
+    padding: 3px 0 3px 5px;
+}
+.add-remove-label {
+    padding-right: 5px;
+}
+.add-text-wrapper img {
+    padding-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.error-message {
+    display: block;
+    padding: 0 5px 5px 5px;
+    color: red;
+}
+.accordion-description {
+    display: block;
+    padding: 0 5px 5px 5px;
+    text-align: center;
+    font-style: italic;
+}
+#reload-text {
+    width: 100%;
+    min-height: 50px;
+}
+.reload-options {
+    padding: 5px;
+}
+.reload-options input {
+    vertical-align: top;
+    margin: 2px 5px 3px 4px;
+}
+.reload-options label {
+    display: inline-block;
+}
+@media (max-width: 1000px) {
+    .wrapper {
+        width: 55%;
+    }
+}
+@media (max-width: 768px) {
+    .toolbar-wrapper {
+        float: none;
+        margin: 30px auto 30px auto;
+    }
+    .wrapper {
+        float: none;
+        margin: 50px auto 0 auto;
+        width: 70%;
+    }
+}

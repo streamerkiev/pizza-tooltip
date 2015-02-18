@@ -1,0 +1,21 @@
+The aim of this project was to create a plugin able to evenly allocate hotspots on a circle
+(represented by pizza) depending on a number of text pieces passed to the plugin initialization.
+Each hotspot has a tooltip with relevant text piece. These tooltips position depending on hotspots
+positions (quarters of pizza), e.g. if the hotspot is placed in the bottom-right quarter, the
+tooltip should form on the top-left corner of the hotspot. Tooltips also have mobile view as part of
+responsive version of the plugin - when browser window is resized to mobile view, tooltips are shown in
+a special area under the pizza. When browser window is resized back to desktop view, tooltips are
+shown back as usual.
+
+Plugin accepts arguments as options, so the first tooltip may be open on load or not, only one
+tooltip can be opened at once or any number of them, preloader may be switched on or off (plugin
+loads only after pizza image is loaded), fancy load can be switched on or off. Fancy load assumes
+creating all hotspots in the center of pizza and their further animated allocation on a circle of pizza.
+
+To demonstrate plugin functionality and allow manipulations with it from front page, Options block
+was added. It is deactivated while plugin is loaded or reloaded and becomes active when plugin
+is ready to be manipulated. Options block is an accordion with 3 sections. First section allows
+to add one or several circles (hotspots). The second section allows to remove a certain hotspot
+by it's number - to count counterclockwise we use a positive number, to count clockwise - a negative
+number. The third section allows to reload plugin with custom text pieces separated with semicolon
+for each hotspot and with custom options.

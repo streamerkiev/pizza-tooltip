@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Pizza Circle!</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+    </head>
+    <body>
+
+    <div class="toolbar-wrapper">
+        <div id="toolbar-deactivator"></div>
+        <div class="toolbar">
+            <h1>- Options -</h1>
+            <ul class="accordion">
+                <li class="accordion-item">
+                    <span class="js-accordion-heading">Add a Circle</span>
+                    <div class="accordion-content">
+                        <div id="add-text-pieces-wrapper">
+                            <div class="add-text-wrapper">
+                                <label for="add-text" class="add-remove-label">Text to add:</label><input type="text" id="add-text" />
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <span id="js-add-error" class="error-message"></span>
+                            <button id="js-add-more-text">Add one more text</button>
+                            <button id="js-add-text">Add text piece(s)</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <span class="js-accordion-heading">Remove a Circle</span>
+                    <div class="accordion-content">
+                        <span class="accordion-description">Enter a negative number (to count clockwise) or a positive number (to count counterclockwise). Circles # start from 0.</span>
+                        <hr width="50%" />
+                        <label for="remove-text" class="add-remove-label">Circle #:</label><input type="text" id="remove-text" />
+                        <div class="controls">
+                            <span id="js-remove-error" class="error-message"></span>
+                            <button id="js-remove-circle">Remove circle</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <span class="js-accordion-heading">Reload with custom Options</span>
+                    <div class="accordion-content">
+                        <label for="reload-text" class="accordion-description">Enter new text<br />(separate with semicolon for each circle):</label>
+                        <textarea id="reload-text"></textarea>
+                        <hr />
+                        <div class="reload-options">
+                            <input type="checkbox" id="is-only-one-active"/><label for="is-only-one-active">Only one tooltip is active</label>
+                        </div>
+                        <div class="reload-options">
+                            <input type="checkbox" id="is-first-open"/><label for="is-first-open">First tooltip is open on load</label>
+                        </div>
+                        <div class="reload-options">
+                            <input type="checkbox" id="is-preloader"/><label for="is-preloader">Enable preloader</label>
+                        </div>
+                        <div class="reload-options">
+                            <input type="checkbox" id="is-fancy-load"/><label for="is-fancy-load">Enable fancy load</label>
+                        </div>
+                        <div class="controls">
+                            <span id="js-reload-error" class="error-message"></span>
+                            <button id="js-reload">Reload Pizza</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="wrapper">
+            <div class="pizza">
+                <img src="images/pizza.png" alt="Pizza!" class="pizza-img" />
+            </div>
+            <div class="mobile-tooltip"></div>
+        </div>
+
+        <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
